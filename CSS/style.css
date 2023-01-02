@@ -1,0 +1,103 @@
+/* Common CSS Begins */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1080px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fcf5eb;
+}
+.db{
+    color: #1c1e21;
+    background-color: #25d366;
+    padding: 16px 28px;
+    font-size: 16px;
+    border: 1px solid #1c1e21;
+    border-radius: 35px;
+    overflow: hidden;
+    z-index: 1;
+}
+.db::after{
+    position: absolute;
+    background-color: #1c1e21 !important;
+    height: 70px !important;
+    width: 100% !important;
+    border-radius: 50%;
+    top: 100%;
+    bottom: auto;
+    z-index: -1;
+}
+.db:hover{
+    color: #fcf5eb;
+}
+.db:hover::after{
+    top: 0;
+    transform: scale(1.2);
+}
+/* Common CSS Finish */
+/* Nav Bar Begins */
+nav{
+    padding: 30px 50px 100px 50px;
+}
+nav .logo,
+nav .menu,
+nav .downButtonGrp{
+    width: 33.3333%;
+}
+nav .menu ul li,
+nav .downButtonGrp ul li{
+    display: inline-block;
+}
+nav .logo img{
+    width: 120px;
+}
+nav .downButtonGrp ul li a,
+nav .menu ul li a{
+    color: #1c1e21;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0 10px;
+    position: relative;
+    display: block;
+}
+nav .downButtonGrp ul li a::after,
+nav .menu ul li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #25d366;
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+    transition: 0.8s;
+}
+nav .downButtonGrp ul li:hover a::after,
+nav .menu ul li:hover a::after{
+    width: 100%;
+}
+nav .downButtonGrp ul li{
+    text-align: right;
+}
+nav .downButtonGrp ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav .menu{
+    padding: 20px;
+}
